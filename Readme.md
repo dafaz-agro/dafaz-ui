@@ -1,4 +1,0 @@
-- [ ] Text
-- [ ] Heading
-- [ ] Button
-- [ ] TextInput
