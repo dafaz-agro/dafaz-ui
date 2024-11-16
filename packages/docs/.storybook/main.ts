@@ -27,7 +27,7 @@ const config: StorybookConfig = {
   ${head}
   <style>a[id$="--docs-only"] { display: none; }</style>
 `,
-  viteFinal: (config, { configType }) => {
+  viteFinal: async (config, { configType }) => {
     if (configType === 'PRODUCTION') {
       config.base = '/dafaz-ui/'
     }
