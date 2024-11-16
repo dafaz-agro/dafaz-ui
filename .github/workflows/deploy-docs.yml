@@ -2,7 +2,7 @@ name: Deploy Design-System Docs
 
 on:
   push:
-  branches:
+    branches:
       - master
 
 jobs:
