@@ -27,5 +27,6 @@ const config: StorybookConfig = {
   ${head}
   <style>a[id$="--docs-only"] { display: none; }</style>
 `,
+
 }
 export default config
