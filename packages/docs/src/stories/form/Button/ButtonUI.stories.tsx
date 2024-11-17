@@ -7,14 +7,6 @@ import { ButtonUI } from './ButtonUI'
 const meta = {
   title: 'Form/Button',
   component: ButtonUI,
-  decorators: [
-    (Story) => (
-      <>
-        <p>Decorator</p>
-        <Story />
-      </>
-    ),
-  ],
   parameters: {
     layout: 'centered',
     componentSubtitle: 'Dafaz design system buttons',

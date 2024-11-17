@@ -26,6 +26,15 @@ const config: StorybookConfig = {
     name: getAbsolutePath('@storybook/react-vite'),
     options: {},
   },
+  managerHead: (head) => `
+  ${head}
+  <style>a[id$="--docs-only"] { display: none; }</style>
+`,
+  typescript: {
+    // Enables the `react-docgen-typescript` parser.
+    // See https://storybook.js.org/docs/api/main-config/main-config-typescript for more information about this option.
+    reactDocgen: 'react-docgen-typescript',
+  },
   viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION') {
       config.base = '/dafaz-ui/'

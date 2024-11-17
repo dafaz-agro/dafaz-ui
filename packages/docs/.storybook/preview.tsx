@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react'
 import { themes } from '@storybook/theming'
+import React from 'react'
 
 const preview: Preview = {
   parameters: {
@@ -24,6 +25,7 @@ const preview: Preview = {
       theme: themes.dark,
     },
   },
+  decorators: [(Story) => <Story />],
 }
 
 export default preview
