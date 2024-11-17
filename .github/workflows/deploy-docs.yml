@@ -5,6 +5,11 @@ on:
     branches:
       - master
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -22,6 +27,6 @@ jobs:
        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
        with:
           install_command: npm ci
-          build_command: npm run build-storybook
+          build_command: npm run build
           path: storybook-static
           checkout: false
