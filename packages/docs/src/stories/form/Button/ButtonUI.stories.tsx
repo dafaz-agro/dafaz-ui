@@ -2,11 +2,20 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 
 import { ButtonUI } from './ButtonUI'
+import { Story } from '@storybook/blocks'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: 'Form/Button',
   component: ButtonUI,
+  decorators: [
+    (Story) => (
+      <>
+        <p>Decorator</p>
+        <Story />
+      </>
+    ),
+  ],
   parameters: {
     layout: 'centered',
     componentSubtitle: 'Dafaz design system buttons',

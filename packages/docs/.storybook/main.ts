@@ -15,29 +15,30 @@ const config: StorybookConfig = {
   },
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
-    getAbsolutePath('@storybook/addon-onboarding'),
-    getAbsolutePath('@storybook/addon-essentials'),
-    getAbsolutePath('@chromatic-com/storybook'),
-    getAbsolutePath('@storybook/addon-interactions'),
-    getAbsolutePath('storybook-dark-mode'),
-    getAbsolutePath('@storybook/addon-a11y'),
+    '@storybook/addon-onboarding',
+    '@storybook/addon-essentials',
+    '@chromatic-com/storybook',
+    '@storybook/addon-interactions',
+    'storybook-dark-mode',
+    '@storybook/addon-a11y',
   ],
   framework: {
-    name: getAbsolutePath('@storybook/react-vite'),
+    name: '@storybook/react-vite',
     options: {},
+  },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
   },
   managerHead: (head) => `
   ${head}
   <style>a[id$="--docs-only"] { display: none; }</style>
 `,
-  viteFinal: async (config, { configType }) => {
-    const { mergeConfig } = await import('vite')
-
+  viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION') {
       config.base = '/dafaz-ui/'
-    } // Your environment configuration here
+    }
 
-    return mergeConfig(config, {})
+    return config
   },
 }
 export default config
