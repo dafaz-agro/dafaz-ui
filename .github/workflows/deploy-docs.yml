@@ -27,6 +27,5 @@ jobs:
        with:
           install_command: npm ci
           build_command: npm run build
-          deploy_command: npm run deploy-storybook
           path: storybook-static
           checkout: false

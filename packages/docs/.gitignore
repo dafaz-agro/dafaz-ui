@@ -12,7 +12,6 @@ dist
 dist-ssr
 *.local
 *.tsbuildinfo
-storybook-static
 
 # Editor directories and files
 .vscode/*
