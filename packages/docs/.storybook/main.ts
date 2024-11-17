@@ -10,28 +10,34 @@ function getAbsolutePath(value: string): any {
   return dirname(require.resolve(join(value, 'package.json')))
 }
 const config: StorybookConfig = {
+  core: {
+    builder: '@storybook/builder-vite',
+  },
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
-    '@storybook/addon-onboarding',
-    '@storybook/addon-essentials',
-    '@chromatic-com/storybook',
-    '@storybook/addon-interactions',
-    'storybook-dark-mode',
-    '@storybook/addon-a11y',
+    getAbsolutePath('@storybook/addon-onboarding'),
+    getAbsolutePath('@storybook/addon-essentials'),
+    getAbsolutePath('@chromatic-com/storybook'),
+    getAbsolutePath('@storybook/addon-interactions'),
+    getAbsolutePath('storybook-dark-mode'),
+    getAbsolutePath('@storybook/addon-a11y'),
   ],
   framework: {
-    name: '@storybook/react-vite',
+    name: getAbsolutePath('@storybook/react-vite'),
     options: {},
   },
   managerHead: (head) => `
   ${head}
   <style>a[id$="--docs-only"] { display: none; }</style>
 `,
-  viteFinal: (config, { configType }) => {
+  viteFinal: async (config, { configType }) => {
+    const { mergeConfig } = await import('vite')
+
     if (configType === 'PRODUCTION') {
       config.base = '/dafaz-ui/'
-    }
-    return config
+    } // Your environment configuration here
+
+    return mergeConfig(config, {})
   },
 }
 export default config
