@@ -11,28 +11,21 @@ function getAbsolutePath(value: string): any {
 }
 const config: StorybookConfig = {
   core: {
-    builder: '@storybook/builder-vite',
+    builder: getAbsolutePath('@storybook/builder-vite'),
   },
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
-    '@storybook/addon-onboarding',
-    '@storybook/addon-essentials',
-    '@chromatic-com/storybook',
-    '@storybook/addon-interactions',
-    'storybook-dark-mode',
-    '@storybook/addon-a11y',
+    getAbsolutePath('@storybook/addon-onboarding'),
+    getAbsolutePath('@storybook/addon-essentials'),
+    getAbsolutePath('@chromatic-com/storybook'),
+    getAbsolutePath('@storybook/addon-interactions'),
+    getAbsolutePath('storybook-dark-mode'),
+    getAbsolutePath('@storybook/addon-a11y'),
   ],
   framework: {
-    name: '@storybook/react-vite',
+    name: getAbsolutePath('@storybook/react-vite'),
     options: {},
   },
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
-  },
-  managerHead: (head) => `
-  ${head}
-  <style>a[id$="--docs-only"] { display: none; }</style>
-`,
   viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION') {
       config.base = '/dafaz-ui/'
