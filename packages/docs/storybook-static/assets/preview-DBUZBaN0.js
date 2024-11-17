@@ -1,1 +1,0 @@
-import{N as r}from"./index-Blc9requ.js";import"./index-B-o1Wr-g.js";import"./_commonjsHelpers-Cpj98o6Y.js";const o={parameters:{controls:{matchers:{color:/(background|color)$/i,date:/Date$/i}},darkMode:{dark:{...r.dark},light:{...r.normal},current:"dark",darkClass:"lights-out",lightClass:"lights-on",classTarget:"html",stylePreview:!0},docs:{theme:r.dark}}};export{o as default};
