@@ -1,4 +1,4 @@
-name: Deploy Design-System Docs
+name: Deploy - UI Storybook
 
 on:
   push:
