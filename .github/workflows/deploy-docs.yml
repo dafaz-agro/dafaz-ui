@@ -25,9 +25,12 @@ jobs:
      - name: Build Storybook
        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
        with:
-          install_command: npm ci
-          build_command: npm run build
-          TURBO_TOKEN: EIeM8IMtp9GBe5SCwpR4TNFB
-          TURBO_TEAM: dafaz
           path: ./packages/docs/storybook-static
           checkout: false
+
+     - run: npm ci
+
+     - run: npm run build
+       env:
+         TURBO_TOKEN: EIeM8IMtp9GBe5SCwpR4TNFB
+         TURBO_TEAM: dafaz
