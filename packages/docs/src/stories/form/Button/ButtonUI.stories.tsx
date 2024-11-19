@@ -17,15 +17,17 @@ const meta = {
     variant: 'primary',
     size: 'md',
     disabled: false,
+    flat: false,
     onClick: fn(),
   },
   argTypes: {
     variant: {
       options: ['primary', 'secondary', 'tertiary'],
       control: 'select',
+      description: 'UI Button mode variants',
     },
     size: {
-      options: ['sm', 'md'],
+      options: ['sm', 'md', 'lg'],
       control: 'select',
     },
   },

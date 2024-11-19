@@ -76,23 +76,42 @@ export const Button = styled('button', {
     size: {
       sm: {
         height: 38,
+        fontSize: '$sm',
       },
       md: {
         height: 46,
+        fontSize: '$lg',
+      },
+      lg: {
+        height: 54,
+        fontSize: '$xl',
       },
     },
-  },
+    flat: {
+      true: {
+        border: 0,
+        background: 'transparent',
 
+        '&:disabled': {
+          color: '$gray200',
+          background: 'transparent',
+          border: 'none',
+        },
+      },
+      false: {},
+    },
+  },
   defaultVariants: {
     variant: 'primary',
     size: 'md',
+    flat: false,
   },
 })
 
 export interface ButtonProps extends ComponentProps<typeof Button> {
   as?: ElementType
   /** How large should the button be? */
-  size?: 'sm' | 'md'
+  size?: 'sm' | 'md' | 'lg'
   /** Optional click handler */
   onClick?: () => void
   /** Button contents */
@@ -101,4 +120,6 @@ export interface ButtonProps extends ComponentProps<typeof Button> {
   disabled?: boolean
   //** Button UI mode */
   variant?: 'primary' | 'secondary' | 'tertiary'
+  //** Flat mode */
+  flat?: boolean
 }

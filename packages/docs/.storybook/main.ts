@@ -1,7 +1,6 @@
 import type { StorybookConfig } from '@storybook/react-vite'
 
 import { join, dirname } from 'path'
-
 /**
  * This function is used to resolve the absolute path of a package.
  * It is needed in projects that use Yarn PnP or are set up within a monorepo.
@@ -22,6 +21,9 @@ const config: StorybookConfig = {
     getAbsolutePath('storybook-dark-mode'),
     getAbsolutePath('@storybook/addon-a11y'),
   ],
+  docs: {
+    autodocs: 'tag',
+  },
   framework: {
     name: getAbsolutePath('@storybook/react-vite'),
     options: {},
@@ -31,9 +33,23 @@ const config: StorybookConfig = {
   <style>a[id$="--docs-only"] { display: none; }</style>
 `,
   typescript: {
-    // Enables the `react-docgen-typescript` parser.
-    // See https://storybook.js.org/docs/api/main-config/main-config-typescript for more information about this option.
+    check: false,
     reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      propFilter: (prop) => {
+        if (prop.name === 'children') {
+          return true
+        }
+
+        if (prop.parent) {
+          return (
+            !/@types\/react/.test(prop.parent.fileName) &&
+            !/@emotion/.test(prop.parent.fileName)
+          )
+        }
+        return true
+      },
+    },
   },
   viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION') {
