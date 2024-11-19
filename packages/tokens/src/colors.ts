@@ -12,4 +12,6 @@ export const colors = {
   dafaz400: '#2FC136',
   dafaz600: '#229E45',
   dafaz800: '#2A6A2D',
+
+  teste: '#FFF',
 }
