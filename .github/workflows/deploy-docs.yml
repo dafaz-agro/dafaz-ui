@@ -22,15 +22,16 @@ jobs:
        with:
           node-version: '20.x'
 
-     - name: Build Storybook
-       uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
-       with:
-          path: ./packages/docs/storybook-static
-          checkout: false
-
      - run: npm ci
 
      - run: npm run build
        env:
          TURBO_TOKEN: EIeM8IMtp9GBe5SCwpR4TNFB
          TURBO_TEAM: dafaz
+
+     - name: Build Storybook
+       uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+       with:
+          path: ./packages/docs/storybook-static
+          checkout: false
+
