@@ -13,9 +13,10 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    env: 
-      TURBO_TOKEN:EIeM8IMtp9GBe5SCwpR4TNFB 
-      TURBO_TEAM:dafaz
+    
+      env: 
+        TURBO_TOKEN:EIeM8IMtp9GBe5SCwpR4TNFB 
+        TURBO_TEAM:dafaz
 
     steps:
      - name: Checkout
