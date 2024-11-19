@@ -27,5 +27,7 @@ jobs:
        with:
           install_command: npm ci
           build_command: npm run build
+          TURBO_TOKEN: EIeM8IMtp9GBe5SCwpR4TNFB
+          TURBO_TEAM: dafaz
           path: ./packages/docs/storybook-static
           checkout: false
