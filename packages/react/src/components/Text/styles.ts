@@ -1,7 +1,7 @@
-import type { ComponentProps, ElementType } from 'react'
-import { styled } from '../styles'
+import { ComponentProps, ElementType } from 'react'
+import { styled } from '../../styles'
 
-export const Text = styled('p', {
+export const TextUI = styled('p', {
   fontFamily: '$web',
   lineHeight: '$base',
   margin: 0,
@@ -24,8 +24,7 @@ export const Text = styled('p', {
   },
 })
 
-export interface TextProps extends ComponentProps<typeof Text> {
+export interface TextUIProps extends ComponentProps<typeof TextUI> {
   as?: ElementType
-  content: string
   size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
 }

@@ -1,9 +1,8 @@
-import type { ComponentProps } from '@stitches/react'
-import { styled } from '../styles'
-import type { ElementType } from 'react'
+import type { ComponentProps, ElementType } from 'react'
+import { styled } from '../../styles'
 
 /** Primary UI component for user interaction */
-export const Button = styled('button', {
+export const ButtonUI = styled('button', {
   all: 'unset',
   borderRadius: '$md',
   fontSize: '$md',
@@ -23,11 +22,6 @@ export const Button = styled('button', {
 
   '&:disabled': {
     cursor: 'not-allowed',
-  },
-
-  svg: {
-    width: '$4',
-    height: '$4',
   },
 
   variants: {
@@ -108,14 +102,12 @@ export const Button = styled('button', {
   },
 })
 
-export interface ButtonProps extends ComponentProps<typeof Button> {
+export interface ButtonUIProps extends ComponentProps<typeof ButtonUI> {
   as?: ElementType
   /** How large should the button be? */
   size?: 'sm' | 'md' | 'lg'
   /** Optional click handler */
   onClick?: () => void
-  /** Button contents */
-  label: string
   /** Button is disable? */
   disabled?: boolean
   //** Button UI mode */

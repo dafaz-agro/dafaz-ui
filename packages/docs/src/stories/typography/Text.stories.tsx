@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import { TextUI } from './TextUI'
+import { Text } from '@dafaz-ui/react'
 
 const meta = {
   title: 'Typography/Text',
-  component: TextUI,
+  component: Text,
   parameters: {
     layout: 'centered',
     componentSubtitle: 'Dafaz design system text',
@@ -13,7 +13,7 @@ const meta = {
   args: {
     as: 'p',
     size: 'md',
-    content:
+    children:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repudiandae non laborum perspiciatis consequuntur sunt soluta quos oditaccusamus pariatur quis, similique commodi eum architecto, at adipisci maxime voluptatem corrupti!',
   },
   argTypes: {
@@ -33,11 +33,11 @@ const meta = {
         defaultValue: { summary: 'md' },
       },
     },
-    content: {
+    children: {
       description: 'Text content',
     },
   },
-} satisfies Meta<typeof TextUI>
+} satisfies Meta<typeof Text>
 
 export default meta
 
@@ -48,6 +48,6 @@ export const Default: StoryUI = {}
 export const Strong: StoryUI = {
   args: {
     as: 'strong',
-    content: 'Lorem ipsum dolor.',
+    children: 'Lorem ipsum dolor.',
   },
 }
