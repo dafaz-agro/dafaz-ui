@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 2.2.2
+
+### Patch Changes
+
+- Fix TextInput
+
 ## 2.2.1
 
 ### Patch Changes

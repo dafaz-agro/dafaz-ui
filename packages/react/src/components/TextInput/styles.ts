@@ -8,7 +8,7 @@ export const InputContainer = styled('div', {
   boxSizing: 'border-box',
   display: 'flex',
   alignItems: 'baseline',
-  padding: '$1 $2',
+  width: '100%',
 
   transition: 'border 0.2s linear',
 
@@ -40,6 +40,8 @@ export const InputUI = styled('input', {
   color: '$white',
   backgroundColor: 'transparent',
   border: 'none',
+  width: '100%',
+  padding: '$1 $2',
 
   '&::-ms-reveal': {
     filter: 'invert(100%)',
@@ -61,6 +63,7 @@ export const Sufix = styled('span', {
   fontSize: '$sm',
   color: '$white',
   fontStyle: 'italic',
+  marginRight: '$2',
 
   '&:has(input:focus)': {
     visibility: 'hidden',
