@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 2.2.1
+
+### Patch Changes
+
+- Fix TextInput shadow
+
 ## 2.2.0
 
 ### Minor Changes

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import { TextInput } from '@dafaz-ui/react'
+import { Box, TextInput } from '@dafaz-ui/react'
 
 const meta = {
   title: 'Form/TextInput',
@@ -14,6 +14,7 @@ const meta = {
     withShadow: false,
   },
   argTypes: {},
+  decorators: [(Story) => <Box>{Story()}</Box>],
 } satisfies Meta<typeof TextInput>
 
 export default meta

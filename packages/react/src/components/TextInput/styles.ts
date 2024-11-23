@@ -24,7 +24,7 @@ export const InputContainer = styled('div', {
   variants: {
     withShadow: {
       true: {
-        boxShadow: 'inset 0 2.5rem #444',
+        boxShadow: 'inset 0 3rem #444',
       },
     },
   },
