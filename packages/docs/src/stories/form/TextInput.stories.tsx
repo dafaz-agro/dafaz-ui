@@ -14,7 +14,13 @@ const meta = {
     withShadow: false,
   },
   argTypes: {},
-  decorators: [(Story) => <Box>{Story()}</Box>],
+  decorators: [
+    (Story) => (
+      <form>
+        <Box>{Story()}</Box>
+      </form>
+    ),
+  ],
 } satisfies Meta<typeof TextInput>
 
 export default meta

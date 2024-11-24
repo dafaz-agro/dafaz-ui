@@ -1,6 +1,6 @@
 {
   "name": "@dafaz-ui/react",
-  "version": "2.2.2",
+  "version": "3.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -26,6 +26,9 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
+    "@radix-ui/react-checkbox": "^1.1.2",
+    "@radix-ui/react-radio-group": "^1.2.1",
     "@stitches/react": "^1.2.8"
   }
 }

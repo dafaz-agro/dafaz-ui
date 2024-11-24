@@ -1,3 +1,4 @@
+import type { CSS } from '@stitches/react'
 import { styled } from '../../styles'
 import type { ComponentProps, ElementType } from 'react'
 
@@ -32,4 +33,5 @@ export interface BoxUIProps extends ComponentProps<typeof BoxUI> {
   as?: ElementType
   stretch?: boolean
   dark?: boolean
+  css?: CSS
 }

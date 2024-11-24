@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 3.0.0
+
+### Major Changes
+
+- Add new form inputs radio, check and others
+
 ## 2.2.2
 
 ### Patch Changes

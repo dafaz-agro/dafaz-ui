@@ -8,3 +8,5 @@ interface BoxProps {
 export function Box({ children, ...props }: BoxUIProps & BoxProps) {
   return <BoxUI {...props}>{children}</BoxUI>
 }
+
+Box.displayName = 'Box'
