@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 3.0.3
+
+### Patch Changes
+
+- fix DisplayName
+
 ## 3.0.2
 
 ### Patch Changes
