@@ -17,5 +17,3 @@ export function Button({
     </ButtonUI>
   )
 }
-
-ButtonUI.displayName = 'Button'

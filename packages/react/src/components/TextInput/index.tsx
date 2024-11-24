@@ -49,5 +49,3 @@ export const TextInput = forwardRef<ElementRef<typeof InputUI>, TextInputProps>(
     )
   },
 )
-
-TextInput.displayName = 'TextInput'

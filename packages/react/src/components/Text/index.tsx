@@ -16,5 +16,3 @@ export function Text({
     </TextUI>
   )
 }
-
-Text.displayName = 'Text'

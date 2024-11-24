@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 3.0.1
+
+### Patch Changes
+
+- Change DisplayName components
+
 ## 3.0.0
 
 ### Major Changes

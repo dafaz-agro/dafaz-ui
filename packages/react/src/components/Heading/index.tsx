@@ -8,5 +8,3 @@ interface HeadingProps {
 export function Heading({ children, ...props }: HeadingUIProps & HeadingProps) {
   return <HeadingUI {...props}>{children}</HeadingUI>
 }
-
-Heading.displayName = 'Heading'
