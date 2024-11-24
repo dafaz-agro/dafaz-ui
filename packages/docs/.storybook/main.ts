@@ -36,6 +36,7 @@ const config: StorybookConfig = {
     check: false,
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
+      setDisplayName: false,
       propFilter: (prop) => {
         if (prop.name === 'children') {
           return true
