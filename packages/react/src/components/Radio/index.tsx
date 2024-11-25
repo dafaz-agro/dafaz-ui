@@ -27,3 +27,5 @@ export function Radio({ items, size, ...props }: RadioGroupProps) {
     </RadioUI>
   )
 }
+
+Radio.displayName = 'Radio'

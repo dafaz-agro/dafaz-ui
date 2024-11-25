@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 3.0.4
+
+### Patch Changes
+
+- Fix displayName form components
+
 ## 3.0.3
 
 ### Patch Changes

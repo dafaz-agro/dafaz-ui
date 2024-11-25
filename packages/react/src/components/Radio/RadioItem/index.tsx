@@ -30,3 +30,5 @@ export function RadioItem({
     </RadioItemContainer>
   )
 }
+
+RadioItem.displayName = 'RadioItem'

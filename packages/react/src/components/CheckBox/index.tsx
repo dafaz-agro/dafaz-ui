@@ -23,3 +23,5 @@ export function CheckBox({
     </Label>
   )
 }
+
+CheckBox.displayName = 'CheckBox'

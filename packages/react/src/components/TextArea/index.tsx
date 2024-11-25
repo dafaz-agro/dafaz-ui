@@ -17,3 +17,5 @@ export function TextArea({
     </TextAreaUI>
   )
 }
+
+TextArea.displayName = 'TextArea'
