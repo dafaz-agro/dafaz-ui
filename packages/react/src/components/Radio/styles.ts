@@ -16,7 +16,7 @@ export const RadioUI = styled(RadioGroup.Root, {
     },
   },
   defaultVariants: {
-    size: 'lg',
+    size: 'md',
   },
 })
 

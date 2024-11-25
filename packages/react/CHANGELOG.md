@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 3.0.5
+
+### Patch Changes
+
+- Change check and radio default width
+
 ## 3.0.4
 
 ### Patch Changes

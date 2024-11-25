@@ -48,7 +48,7 @@ export const CheckBoxUI = styled(Checkbox.Root, {
     },
   },
   defaultVariants: {
-    size: 'lg',
+    size: 'md',
   },
 })
 
@@ -90,7 +90,7 @@ export const CheckBoxIndicator = styled(Checkbox.Indicator, {
     },
   },
   defaultVariants: {
-    size: 'lg',
+    size: 'md',
   },
 })
 
@@ -119,7 +119,7 @@ export const Label = styled('label', {
     },
   },
   defaultVariants: {
-    size: 'lg',
+    size: 'md',
   },
 })
 

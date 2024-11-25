@@ -11,7 +11,7 @@ const meta = {
   },
   tags: ['autodocs'],
   args: {
-    size: 'lg',
+    size: 'md',
     id: '0',
     label: 'Accept terms of use',
   },

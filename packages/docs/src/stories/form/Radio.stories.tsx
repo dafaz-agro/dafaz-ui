@@ -11,7 +11,7 @@ const meta = {
   },
   tags: ['autodocs'],
   args: {
-    size: 'lg',
+    size: 'md',
     items: [
       { id: '0', label: 'Default', value: 'default' },
       { id: '1', label: 'Confortable', value: 'confortable' },

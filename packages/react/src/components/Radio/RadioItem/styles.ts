@@ -54,7 +54,7 @@ export const RadioItemUI = styled(RadioGroup.Item, {
     },
   },
   defaultVariants: {
-    size: 'lg',
+    size: 'md',
   },
 })
 
@@ -96,7 +96,7 @@ export const RadioIndicator = styled(RadioGroup.Indicator, {
     },
   },
   defaultVariants: {
-    size: 'lg',
+    size: 'md',
   },
 })
 
@@ -121,7 +121,7 @@ export const Label = styled('label', {
     },
   },
   defaultVariants: {
-    size: 'lg',
+    size: 'md',
   },
 })
 
