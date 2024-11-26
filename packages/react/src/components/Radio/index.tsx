@@ -22,6 +22,7 @@ export function Radio({
       {items.map((item) => {
         return (
           <RadioItem
+            key={item.id}
             id={item.id}
             label={item.label}
             value={item.value}

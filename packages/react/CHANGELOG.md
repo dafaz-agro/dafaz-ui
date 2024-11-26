@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 4.0.10
+
+### Patch Changes
+
+- fix key radio
+
 ## 4.0.9
 
 ### Patch Changes
