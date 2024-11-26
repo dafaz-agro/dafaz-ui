@@ -8,6 +8,11 @@ export const RadioUI = styled(RadioGroup.Root, {
   flexDirection: 'column',
   gap: '$4',
 
+  '&:disabled': {
+    opacity: 0.5,
+    cursor: 'not-allowed',
+  },
+
   variants: {
     size: {
       lg: {},

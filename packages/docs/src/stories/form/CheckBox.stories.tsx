@@ -20,7 +20,7 @@ const meta = {
       options: ['sm', 'md', 'lg'],
       control: 'select',
       table: {
-        defaultValue: { summary: 'lg' },
+        defaultValue: { summary: 'md' },
       },
     },
   },

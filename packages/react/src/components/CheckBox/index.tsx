@@ -10,11 +10,12 @@ export function CheckBox({
   id,
   label,
   size,
+  disabled = false,
   ...props
 }: CheckboxIUProps & CheckboxProps) {
   return (
-    <Label htmlFor={id} size={size}>
-      <CheckBoxUI id={id} {...props} size={size}>
+    <Label disabled={disabled} htmlFor={id} size={size}>
+      <CheckBoxUI disabled={disabled} id={id} {...props} size={size}>
         <CheckBoxIndicator asChild size={size}>
           <Check weight="bold" />
         </CheckBoxIndicator>

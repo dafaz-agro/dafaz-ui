@@ -21,6 +21,10 @@ export const RadioItemUI = styled(RadioGroup.Item, {
   borderBottom: '2px solid $dafaz600',
   transition: 'border 0.1s linear',
 
+  '&:disabled': {
+    cursor: 'not-allowed',
+  },
+
   '&:focus,&[data-state="checked"]': {
     backgroundColor: '$dafaz600',
     borderColor: '$dafaz600',
@@ -108,6 +112,12 @@ export const Label = styled('label', {
   cursor: 'pointer',
 
   variants: {
+    disabled: {
+      true: {
+        opacity: 0.5,
+        cursor: 'not-allowed',
+      },
+    },
     size: {
       lg: {
         fontSize: '$xl',
@@ -121,6 +131,7 @@ export const Label = styled('label', {
     },
   },
   defaultVariants: {
+    disabled: false,
     size: 'md',
   },
 })

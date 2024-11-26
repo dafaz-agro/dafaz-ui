@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 4.0.0
+
+### Major Changes
+
+- Add select input form
+
 ## 3.0.5
 
 ### Patch Changes

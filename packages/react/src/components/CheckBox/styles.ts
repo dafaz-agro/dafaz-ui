@@ -28,6 +28,11 @@ export const CheckBoxUI = styled(Checkbox.Root, {
     borderColor: '$dafaz600',
   },
 
+  '&:disabled': {
+    opacity: 0.5,
+    cursor: 'not-allowed',
+  },
+
   variants: {
     size: {
       lg: {
@@ -106,6 +111,12 @@ export const Label = styled('label', {
   alignItems: 'center',
 
   variants: {
+    disabled: {
+      true: {
+        opacity: 0.5,
+        cursor: 'not-allowed',
+      },
+    },
     size: {
       lg: {
         fontSize: '$xl',
@@ -119,10 +130,12 @@ export const Label = styled('label', {
     },
   },
   defaultVariants: {
+    disabled: false,
     size: 'md',
   },
 })
 
 export interface CheckboxIUProps extends ComponentProps<typeof CheckBoxUI> {
   size?: 'sm' | 'md' | 'lg'
+  disabled?: boolean
 }

@@ -1,16 +1,17 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import { Radio } from '@dafaz-ui/react'
+import { Select } from '@dafaz-ui/react'
 
 const meta = {
-  title: 'Form/Radio',
-  component: Radio,
+  title: 'Form/Select',
+  component: Select,
   parameters: {
     layout: 'centered',
-    componentSubtitle: 'Dafaz design system Radio',
+    componentSubtitle: 'Dafaz design system Select',
   },
   tags: ['autodocs'],
   args: {
+    placeholder: 'Selecione...',
     size: 'md',
     items: [
       { id: '0', label: 'Default', value: 'default' },
@@ -32,7 +33,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Radio>
+} satisfies Meta<typeof Select>
 
 export default meta
 
@@ -43,7 +44,7 @@ export const Default: StoryUI = {
   parameters: {
     docs: {
       description: {
-        story: 'Radio component',
+        story: 'Select component',
       },
     },
   },

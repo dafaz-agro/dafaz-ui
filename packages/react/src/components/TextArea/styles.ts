@@ -30,7 +30,7 @@ export const TextAreaUI = styled('textarea', {
   },
 
   '&::placeholder': {
-    fontSize: '$xl',
+    fontSize: '$lg',
     fontWeight: '$regular',
     color: '$white',
     opacity: 0.75,
