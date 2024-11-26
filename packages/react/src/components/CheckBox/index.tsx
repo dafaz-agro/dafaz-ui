@@ -27,7 +27,7 @@ export const CheckBox = forwardRef<
     }: CheckboxProps,
     ref,
   ) => {
-    const [checkValue, setCheckValue] = useState(value)
+    const [checkValue, setCheckValue] = useState(checked ? value : undefined)
 
     useEffect(() => {
       if (checked) {
