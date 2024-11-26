@@ -26,7 +26,7 @@ export const CheckBox = forwardRef<
     ref,
   ) => {
     return (
-      <Label disabled={disabled} htmlFor={id} size={size}>
+      <Label htmlFor={id} disabled={disabled} size={size}>
         <CheckBoxUI
           ref={ref}
           checked={checked}
