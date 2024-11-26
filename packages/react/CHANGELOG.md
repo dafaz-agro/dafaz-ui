@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 4.0.6
+
+### Patch Changes
+
+- fix button type
+
 ## 4.0.5
 
 ### Patch Changes

@@ -9,10 +9,11 @@ export function Button({
   children,
   variant = 'primary',
   size = 'md',
+  type = 'button',
   ...props
 }: ButtonUIProps & ButtonProps) {
   return (
-    <ButtonUI variant={variant} size={size} {...props}>
+    <ButtonUI type={type} variant={variant} size={size} {...props}>
       {children}
     </ButtonUI>
   )
