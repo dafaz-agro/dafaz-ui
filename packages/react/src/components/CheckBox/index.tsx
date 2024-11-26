@@ -6,7 +6,6 @@ interface CheckboxProps extends CheckboxIUProps {
   id: string
   label: string
   checked: boolean
-  value: string | number | readonly string[] | undefined
   onCheckedChange: (checked: boolean) => void
 }
 
@@ -36,7 +35,7 @@ export const CheckBox = forwardRef<
           disabled={disabled}
           id={id}
           size={size}
-          value={value}
+          value={checked ? value : ''}
           {...props}
         >
           <CheckBoxIndicator asChild size={size}>
