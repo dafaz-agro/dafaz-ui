@@ -1,4 +1,4 @@
-import { forwardRef, type ElementRef } from 'react'
+import { forwardRef, useEffect, useState, type ElementRef } from 'react'
 import { CheckBoxIndicator, CheckBoxUI, Label, CheckboxIUProps } from './styles'
 import { Check } from '@phosphor-icons/react'
 
@@ -20,13 +20,23 @@ export const CheckBox = forwardRef<
       label,
       size,
       disabled = false,
-      checked,
+      checked = false,
       onCheckedChange,
       value,
       ...props
     }: CheckboxProps,
     ref,
   ) => {
+    const [checkValue, setCheckValue] = useState(value)
+
+    useEffect(() => {
+      if (checked) {
+        setCheckValue(value)
+      } else {
+        setCheckValue(undefined)
+      }
+    }, [checked, value])
+
     return (
       <Label htmlFor={id} disabled={disabled} size={size}>
         <CheckBoxUI
@@ -36,7 +46,7 @@ export const CheckBox = forwardRef<
           disabled={disabled}
           id={id}
           size={size}
-          value={checked ? value : ''}
+          value={checkValue}
           {...props}
         >
           <CheckBoxIndicator asChild size={size}>
