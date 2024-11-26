@@ -13,6 +13,7 @@ export interface TextInputProps extends ComponentProps<typeof InputUI> {
   withShadow?: boolean
   placeholder?: string
   type?: string
+  id: string
 }
 
 export const TextInput = forwardRef<ElementRef<typeof InputUI>, TextInputProps>(
