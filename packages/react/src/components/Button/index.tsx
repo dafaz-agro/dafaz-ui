@@ -8,7 +8,7 @@ interface ButtonProps {
 export function Button({
   children,
   variant = 'primary',
-  size = 'md',
+  size = 'lg',
   type = 'button',
   ...props
 }: ButtonUIProps & ButtonProps) {

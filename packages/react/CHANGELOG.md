@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 4.0.7
+
+### Patch Changes
+
+- fix button size
+
 ## 4.0.6
 
 ### Patch Changes

@@ -97,7 +97,7 @@ export const ButtonUI = styled('button', {
   },
   defaultVariants: {
     variant: 'primary',
-    size: 'md',
+    size: 'lg',
     flat: false,
   },
 })

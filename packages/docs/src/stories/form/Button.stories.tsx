@@ -17,7 +17,7 @@ const meta = {
   args: {
     children: 'Fazer cadastro',
     variant: 'primary',
-    size: 'md',
+    size: 'lg',
     disabled: false,
     flat: false,
     onClick: fn(),
