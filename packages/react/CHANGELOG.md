@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 4.0.17
+
+### Patch Changes
+
+- fix value checkBox
+
 ## 4.0.16
 
 ### Patch Changes
