@@ -20,7 +20,7 @@ export const SelectUI = styled('select', {
 
   width: '100%',
   margin: 0,
-  padding: '$1 $2',
+  padding: '$1 $1',
 
   '&:focus': {
     outline: 0,

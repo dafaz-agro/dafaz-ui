@@ -1,5 +1,7 @@
 import { SelectUI, SelectUIProps, OptionUI } from './styles'
 
+import { ChangeEvent, useState } from 'react'
+
 interface Item {
   id: string
   label: string
@@ -17,8 +19,22 @@ export function Select({
   items,
   ...props
 }: SelectUIProps & SelectProps) {
+  const [value, setValue] = useState('')
+
+  function handleSelect(event: ChangeEvent<HTMLSelectElement>) {
+    setValue(() => {
+      return event.target.value
+    })
+  }
+
   return (
-    <SelectUI size={size} {...props} defaultValue="">
+    <SelectUI
+      size={size}
+      {...props}
+      value={value}
+      onChange={handleSelect}
+      style={{ opacity: value != '' ? 1 : 0.75 }}
+    >
       <OptionUI className="placeholder" value="">
         {placeholder}
       </OptionUI>

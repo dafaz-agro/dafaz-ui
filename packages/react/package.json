@@ -1,6 +1,6 @@
 {
   "name": "@dafaz-ui/react",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -21,7 +21,6 @@
     "@types/react-dom": "^18.3.1",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.3",
-    "react": "^18.3.1",
     "tsup": "^8.3.5",
     "typescript": "^5.6.3"
   },
@@ -29,6 +28,7 @@
     "@phosphor-icons/react": "^2.1.7",
     "@radix-ui/react-checkbox": "^1.1.2",
     "@radix-ui/react-radio-group": "^1.2.1",
-    "@stitches/react": "^1.2.8"
+    "@stitches/react": "^1.2.8",
+    "react": "^18.3.1"
   }
 }
