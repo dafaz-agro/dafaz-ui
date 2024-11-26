@@ -47,7 +47,7 @@ export const SelectUI = styled('select', {
   },
 
   defaultVariants: {
-    size: 'md',
+    size: 'lg',
   },
 })
 
@@ -76,7 +76,7 @@ export const OptionUI = styled('option', {
     },
   },
   defaultVariants: {
-    size: 'md',
+    size: 'lg',
   },
 })
 

@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 4.0.5
+
+### Patch Changes
+
+- change default size select field
+
 ## 4.0.4
 
 ### Patch Changes
