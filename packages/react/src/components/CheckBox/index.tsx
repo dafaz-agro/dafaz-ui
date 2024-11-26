@@ -5,6 +5,8 @@ import { Check } from '@phosphor-icons/react'
 interface CheckboxProps extends CheckboxIUProps {
   id: string
   label: string
+  checked: boolean
+  onCheckedChange: (checked: boolean) => void
 }
 
 export const CheckBox = forwardRef<

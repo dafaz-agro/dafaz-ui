@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 4.0.12
+
+### Patch Changes
+
+- fix ref checkbox
+
 ## 4.0.11
 
 ### Patch Changes
