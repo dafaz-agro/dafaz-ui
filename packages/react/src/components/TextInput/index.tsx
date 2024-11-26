@@ -21,6 +21,7 @@ export const TextInput = forwardRef<ElementRef<typeof InputUI>, TextInputProps>(
       withShadow = false,
       required = true,
       requiredText = 'Opcional',
+      id,
       ...props
     }: TextInputProps,
     ref,
@@ -39,7 +40,7 @@ export const TextInput = forwardRef<ElementRef<typeof InputUI>, TextInputProps>(
 
     return (
       <InputContainer withShadow={withShadow}>
-        <InputUI ref={ref} onChange={handleOnChange} {...props} />
+        <InputUI id={id} ref={ref} onChange={handleOnChange} {...props} />
         {!hiddenOptional && (
           <Sufix style={{ marginLeft: `-${requiredText.length / 2}rem` }}>
             {requiredText}

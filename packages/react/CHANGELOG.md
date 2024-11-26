@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 4.0.1
+
+### Patch Changes
+
+- fix InputText
+
 ## 4.0.0
 
 ### Major Changes
