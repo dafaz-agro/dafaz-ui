@@ -6,6 +6,7 @@ interface CheckboxProps extends CheckboxIUProps {
   id: string
   label: string
   checked: boolean
+  value: string | number | readonly string[] | undefined
   onCheckedChange: (checked: boolean) => void
 }
 
