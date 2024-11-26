@@ -3,6 +3,7 @@ import { ButtonUI, ButtonUIProps } from './styles'
 
 interface ButtonProps {
   children: ReactNode
+  type: string
 }
 
 export function Button({
