@@ -11,7 +11,7 @@ const meta = {
   },
   tags: ['autodocs'],
   args: {
-    size: 'md',
+    size: 'lg',
     id: '0',
     label: 'Accept terms of use',
   },
@@ -20,7 +20,7 @@ const meta = {
       options: ['sm', 'md', 'lg'],
       control: 'select',
       table: {
-        defaultValue: { summary: 'md' },
+        defaultValue: { summary: 'lg' },
       },
     },
   },

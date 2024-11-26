@@ -12,8 +12,8 @@ export const CheckBoxUI = styled(Checkbox.Root, {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  borderBottom: '2px solid $dafaz600',
-  transition: 'border 0.1s linear',
+  transition: 'border 0.2s linear',
+  border: '2px solid $gray400',
 
   '&:focus,&[data-state="checked"]': {
     backgroundColor: '$dafaz600',
@@ -21,11 +21,12 @@ export const CheckBoxUI = styled(Checkbox.Root, {
   },
 
   '&[data-state="unchecked"]': {
-    backgroundColor: '$gray800',
+    backgroundColor: '$gray400',
+    opacity: 0.9,
   },
 
   '&:hover': {
-    borderColor: '$dafaz600',
+    border: '2px solid $dafaz600',
   },
 
   '&:disabled': {
@@ -36,24 +37,21 @@ export const CheckBoxUI = styled(Checkbox.Root, {
   variants: {
     size: {
       lg: {
-        width: '$7',
-        height: '$7',
-        borderBottom: '2px solid $dafaz600',
+        width: '$6',
+        height: '$6',
       },
       md: {
         width: '$5',
         height: '$5',
-        borderBottom: '1px solid $dafaz600',
       },
       sm: {
         width: '$5',
         height: '$5',
-        borderBottom: '0.5px solid $dafaz600',
       },
     },
   },
   defaultVariants: {
-    size: 'md',
+    size: 'lg',
   },
 })
 
@@ -95,7 +93,7 @@ export const CheckBoxIndicator = styled(Checkbox.Indicator, {
     },
   },
   defaultVariants: {
-    size: 'md',
+    size: 'lg',
   },
 })
 
@@ -107,7 +105,7 @@ export const Label = styled('label', {
   cursor: 'pointer',
 
   display: 'flex',
-  gap: '$2',
+  gap: '$3',
   alignItems: 'center',
 
   variants: {
@@ -131,7 +129,7 @@ export const Label = styled('label', {
   },
   defaultVariants: {
     disabled: false,
-    size: 'md',
+    size: 'lg',
   },
 })
 

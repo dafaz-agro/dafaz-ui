@@ -11,7 +11,7 @@ const meta = {
   },
   tags: ['autodocs'],
   args: {
-    size: 'md',
+    size: 'lg',
     items: [
       { id: '0', label: 'Default', value: 'default' },
       { id: '1', label: 'Confortable', value: 'confortable' },
@@ -28,7 +28,7 @@ const meta = {
       options: ['sm', 'md', 'lg'],
       control: 'select',
       table: {
-        defaultValue: { summary: 'md' },
+        defaultValue: { summary: 'lg' },
       },
     },
   },

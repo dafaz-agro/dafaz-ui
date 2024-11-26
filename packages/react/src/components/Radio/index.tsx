@@ -5,7 +5,6 @@ interface Item {
   id: string
   label: string
   value: string
-  disabled: boolean
 }
 
 interface RadioGroupProps extends RadioUIProps {

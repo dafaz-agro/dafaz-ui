@@ -5,7 +5,7 @@ import * as RadioGroup from '@radix-ui/react-radio-group'
 export const RadioItemContainer = styled('div', {
   display: 'flex',
   alignItems: 'center',
-  gap: '$2',
+  gap: '$3',
 })
 
 export const RadioItemUI = styled(RadioGroup.Item, {
@@ -18,8 +18,7 @@ export const RadioItemUI = styled(RadioGroup.Item, {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  borderBottom: '2px solid $dafaz600',
-  transition: 'border 0.1s linear',
+  transition: 'border 0.2s linear',
 
   '&:disabled': {
     cursor: 'not-allowed',
@@ -31,7 +30,8 @@ export const RadioItemUI = styled(RadioGroup.Item, {
   },
 
   '&[data-state="unchecked"]': {
-    backgroundColor: '$gray800',
+    backgroundColor: '$gray400',
+    border: '2px solid $gray400',
   },
 
   '&:hover': {
@@ -41,8 +41,8 @@ export const RadioItemUI = styled(RadioGroup.Item, {
   variants: {
     size: {
       lg: {
-        width: '$7',
-        height: '$7',
+        width: '$6',
+        height: '$6',
         borderBottom: '2px solid $dafaz600',
       },
       md: {
@@ -58,7 +58,7 @@ export const RadioItemUI = styled(RadioGroup.Item, {
     },
   },
   defaultVariants: {
-    size: 'md',
+    size: 'lg',
   },
 })
 
@@ -100,7 +100,7 @@ export const RadioIndicator = styled(RadioGroup.Indicator, {
     },
   },
   defaultVariants: {
-    size: 'md',
+    size: 'lg',
   },
 })
 
@@ -132,7 +132,7 @@ export const Label = styled('label', {
   },
   defaultVariants: {
     disabled: false,
-    size: 'md',
+    size: 'lg',
   },
 })
 
