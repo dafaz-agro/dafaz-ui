@@ -21,7 +21,6 @@ export const CheckBox = forwardRef<
       disabled = false,
       checked,
       onCheckedChange,
-      value,
       ...props
     }: CheckboxProps,
     ref,
@@ -35,7 +34,6 @@ export const CheckBox = forwardRef<
           disabled={disabled}
           id={id}
           size={size}
-          value={value}
           {...props}
         >
           <CheckBoxIndicator asChild size={size}>
