@@ -7,7 +7,6 @@ export const InputContainer = styled('div', {
   borderRadius: '$md',
   boxSizing: 'border-box',
   display: 'flex',
-  alignItems: 'baseline',
   width: '100%',
 
   boxShadow: '0 3px 2px -2px $colors$gray400',
