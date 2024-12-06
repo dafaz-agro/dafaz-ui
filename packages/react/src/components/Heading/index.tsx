@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { HeadingUI, HeadingUIProps } from './styles'
 
-interface HeadingProps {
+export interface HeadingProps {
   children: ReactNode
 }
 

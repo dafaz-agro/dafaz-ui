@@ -1,4 +1,4 @@
-import { ComponentProps, ElementType } from 'react'
+import { ComponentProps, ElementType, type CSSProperties } from 'react'
 import { styled } from '../../styles'
 
 export const HeadingUI = styled('h2', {
@@ -7,30 +7,44 @@ export const HeadingUI = styled('h2', {
   margin: 0,
 
   variants: {
-    mode: {
-      default: {
-        color: '$dafaz400',
-      },
+    size: {
+      sm: { fontSize: '$2xl' },
+      md: { fontSize: '$3xl' },
+      lg: { fontSize: '$4xl' },
+      xl: { fontSize: '$5xl' },
+      '2xl': { fontSize: '$6xl' },
+      '3xl': { fontSize: '$7xl' },
+      '4xl': { fontSize: '$8xl' },
+      '5xl': { fontSize: '$9xl' },
+      '6xl': { fontSize: '$10xl' },
+    },
+    color: {
       white: {
         color: '$white',
       },
-    },
-    size: {
-      sm: { fontSize: '$lg' },
-      md: { fontSize: '$xl' },
-      lg: { fontSize: '$2xl' },
-      xl: { fontSize: '3rem' },
-      '2xl': { fontSize: '4rem' },
+      black: {
+        color: 'black',
+      },
+      primary: {
+        color: '$dafaz400',
+      },
+      lightGray: {
+        color: '$gray400',
+      },
+      darkGray: {
+        color: '$gray800',
+      },
     },
   },
   defaultVariants: {
-    mode: 'default',
+    color: 'white',
     size: 'lg',
   },
 })
 
 export interface HeadingUIProps extends ComponentProps<typeof HeadingUI> {
   as?: ElementType
-  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
-  mode?: 'default' | 'white'
+  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl'
+  color: 'white' | 'black' | 'primary' | 'lightGray' | 'darkGray'
+  style?: CSSProperties
 }

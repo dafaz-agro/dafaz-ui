@@ -16,6 +16,8 @@ export const SelectUI = styled('select', {
   boxSizing: 'border-box',
   borderRadius: '$md',
   borderBottom: '2px solid $dafaz600',
+  boxShadow: '0 3px 2px -2px $colors$gray400',
+
   transition: 'border 0.2s linear',
 
   width: '100%',

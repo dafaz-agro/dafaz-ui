@@ -1,4 +1,4 @@
-import type { ComponentProps, ElementType } from 'react'
+import type { ComponentProps, CSSProperties, ElementType } from 'react'
 import { styled } from '../../styles'
 
 /** Primary UI component for user interaction */
@@ -11,6 +11,7 @@ export const ButtonUI = styled('button', {
   textAlign: 'center',
   minWidth: 120,
   boxSizing: 'border-box',
+  boxShadow: '3px 3px 2px -2px $colors$gray400',
 
   display: 'flex',
   alignItems: 'center',
@@ -19,6 +20,8 @@ export const ButtonUI = styled('button', {
   padding: '$2 $5',
 
   cursor: 'pointer',
+
+  transition: 'background 0.2s linear',
 
   '&:disabled': {
     cursor: 'not-allowed',
@@ -29,10 +32,9 @@ export const ButtonUI = styled('button', {
       primary: {
         color: '$white',
         background: '$dafaz600',
-        opacity: 0.8,
 
         '&:not(:disabled):hover': {
-          opacity: 1,
+          background: '$dafaz400',
         },
 
         '&:disabled': {
@@ -40,13 +42,15 @@ export const ButtonUI = styled('button', {
         },
       },
       secondary: {
+        transition: 'border, color 0.2s linear',
+
         fontWeight: '$medium',
         color: '$dafaz600',
         border: '2px solid $dafaz600',
-        opacity: 0.8,
 
         '&:not(:disabled):hover': {
-          opacity: 1,
+          color: '$dafaz400',
+          border: '2px solid $dafaz400',
         },
 
         '&:disabled': {
@@ -55,11 +59,13 @@ export const ButtonUI = styled('button', {
         },
       },
       tertiary: {
+        transition: 'color 0.2s linear',
+        boxShadow: 'none',
         fontWeight: '$medium',
-        color: '$gray400',
+        color: '$gray100',
 
         '&:not(:disabled):hover': {
-          color: '$gray800',
+          opacity: 0.9,
         },
 
         '&:disabled': {
@@ -114,4 +120,5 @@ export interface ButtonUIProps extends ComponentProps<typeof ButtonUI> {
   variant?: 'primary' | 'secondary' | 'tertiary'
   //** Flat mode */
   flat?: boolean
+  style?: CSSProperties
 }

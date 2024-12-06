@@ -1,21 +1,29 @@
-import type { ReactNode } from 'react'
+import { forwardRef, ElementRef, type ReactNode } from 'react'
 import { TextAreaUI, type TextAreaUIProps } from './styles'
 
-interface TextAreaProps {
-  children?: ReactNode
+interface TextAreaProps extends TextAreaUIProps {
+  id: string
   placeholder?: string
   disabled?: boolean
+  children?: ReactNode
 }
 
-export function TextArea({
-  children,
-  ...props
-}: TextAreaUIProps & TextAreaProps) {
+export const TextArea = forwardRef<
+  ElementRef<typeof TextAreaUI>,
+  TextAreaProps
+>(({ id, disabled, placeholder, children, ...props }: TextAreaProps, ref) => {
   return (
-    <TextAreaUI rows={3} {...props}>
+    <TextAreaUI
+      ref={ref}
+      rows={3}
+      id={id}
+      placeholder={placeholder}
+      disabled={disabled}
+      {...props}
+    >
       {children}
     </TextAreaUI>
   )
-}
+})
 
 TextArea.displayName = 'TextArea'

@@ -12,15 +12,20 @@ const meta = {
   tags: ['autodocs'],
   args: {
     children: (
-      <Text size="xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-        voluptatum, consequatur inventore, iusto sunt quaerat voluptatibus
-        mollitia voluptate voluptas ut hic odit rerum unde nemo tenetur dicta
-        vitae quod! Laudantium.
-      </Text>
+      <Box color="primary" stretch={false}>
+        <Text size="xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+          voluptatum, consequatur inventore, iusto sunt quaerat voluptatibus
+          mollitia voluptate voluptas ut hic odit rerum unde nemo tenetur dicta
+          vitae quod! Laudantium.
+        </Text>
+      </Box>
     ),
-    dark: false,
-    stretch: false,
+    direction: 'row',
+    color: 'dark',
+    stretch: true,
+    rounded: 'px',
+    withShadow: false,
   },
   argTypes: {
     children: {
@@ -28,17 +33,38 @@ const meta = {
         disable: true,
       },
     },
-    dark: {
+    direction: {
+      control: 'radio',
+      options: ['none', 'row', 'column'],
       table: {
-        defaultValue: { summary: 'false' },
+        defaultValue: { summary: 'row' },
+      },
+    },
+    color: {
+      control: 'select',
+      options: ['dark', 'primary', 'secondary', 'light', 'transparent'],
+      table: {
+        defaultValue: { summary: 'dark' },
+      },
+    },
+    rounded: {
+      control: 'select',
+      options: ['px', 'sm', 'md', 'full'],
+      table: {
+        defaultValue: { summary: 'px' },
       },
     },
     stretch: {
       table: {
-        defaultValue: { summary: 'false' },
+        defaultValue: { summary: 'true' },
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <div style={{ padding: '5rem' }}>{Story(meta.args.children)}</div>
+    ),
+  ],
 } satisfies Meta<typeof Box>
 
 export default meta

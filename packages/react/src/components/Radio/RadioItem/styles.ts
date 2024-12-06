@@ -1,4 +1,4 @@
-import type { ComponentProps } from 'react'
+import type { ComponentProps, CSSProperties } from 'react'
 import { keyframes, styled } from '../../../styles'
 import * as RadioGroup from '@radix-ui/react-radio-group'
 
@@ -18,6 +18,8 @@ export const RadioItemUI = styled(RadioGroup.Item, {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+
+  boxShadow: '1.3px 1.3px 4px -1px $colors$dafaz600',
   transition: 'border 0.2s linear',
 
   '&:disabled': {
@@ -138,4 +140,5 @@ export const Label = styled('label', {
 
 export interface RadioItemUIProps extends ComponentProps<typeof RadioItemUI> {
   size?: 'sm' | 'md' | 'lg'
+  style?: CSSProperties
 }

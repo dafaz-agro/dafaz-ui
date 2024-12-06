@@ -11,13 +11,23 @@ const meta = {
   },
   tags: ['autodocs'],
   args: {
+    size: 'lg',
     withShadow: false,
+    type: 'text',
   },
-  argTypes: {},
+  argTypes: {
+    size: {
+      options: ['sm', 'md', 'lg'],
+      control: 'select',
+      table: {
+        defaultValue: { summary: 'lg' },
+      },
+    },
+  },
   decorators: [
     (Story) => (
       <form>
-        <Box>{Story()}</Box>
+        <Box color="transparent">{Story()}</Box>
       </form>
     ),
   ],

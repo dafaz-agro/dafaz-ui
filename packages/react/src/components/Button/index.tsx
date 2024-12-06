@@ -3,7 +3,7 @@ import { ButtonUI, ButtonUIProps } from './styles'
 
 interface ButtonProps {
   children: ReactNode
-  type: string
+  type?: string
   form?: string
 }
 

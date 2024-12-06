@@ -13,6 +13,7 @@ const meta = {
   args: {
     as: 'p',
     size: 'md',
+    color: 'white',
     children:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, repudiandae non laborum perspiciatis consequuntur sunt soluta quos oditaccusamus pariatur quis, similique commodi eum architecto, at adipisci maxime voluptatem corrupti!',
   },
@@ -25,8 +26,16 @@ const meta = {
         defaultValue: { summary: '<p>' },
       },
     },
+    color: {
+      options: ['white', 'black', 'primary', 'lightGray', 'darkGray'],
+      control: 'select',
+      description: 'Alter the color of Heading',
+      table: {
+        defaultValue: { summary: 'white' },
+      },
+    },
     size: {
-      options: ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'],
+      options: ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl'],
       control: 'select',
       description: 'Text size options',
       table: {

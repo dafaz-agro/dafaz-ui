@@ -12,8 +12,8 @@ const meta = {
   tags: ['autodocs'],
   args: {
     as: 'h2',
-    mode: 'default',
-    size: 'lg',
+    color: 'white',
+    size: '2xl',
     children: 'Heading',
   },
   argTypes: {
@@ -26,19 +26,19 @@ const meta = {
       },
     },
     size: {
-      options: ['sm', 'md', 'lg', 'xl', '2xl'],
+      options: ['sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl'],
       control: 'select',
       description: 'Heading size options',
       table: {
-        defaultValue: { summary: 'lg' },
+        defaultValue: { summary: '2xl' },
       },
     },
-    mode: {
-      options: ['default', 'white'],
+    color: {
+      options: ['white', 'black', 'primary', 'lightGray', 'darkGray'],
       control: 'select',
       description: 'Alter the color of Heading',
       table: {
-        defaultValue: { summary: 'default' },
+        defaultValue: { summary: 'white' },
       },
     },
     children: {
@@ -64,6 +64,6 @@ export const Default: StoryUI = {
 
 export const White: StoryUI = {
   args: {
-    mode: 'white',
+    color: 'white',
   },
 }

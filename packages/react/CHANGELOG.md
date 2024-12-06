@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 5.0.0
+
+### Major Changes
+
+- Add new features: multiselect, new font sizes
+
 ## 4.0.19
 
 ### Patch Changes

@@ -1,5 +1,6 @@
 {
-  "workbench.colorTheme": "poimandres",
+  "workbench.colorTheme": "Min Dark",
   "workbench.preferredDarkColorTheme": "poimandres",
-  "workbench.preferredLightColorTheme": "poimandres"
+  "workbench.preferredLightColorTheme": "Min Dark",
+  "window.autoDetectColorScheme": false
 }

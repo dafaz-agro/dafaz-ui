@@ -7,11 +7,12 @@ interface TextProps {
 
 export function Text({
   children,
-  size = 'md',
+  size,
+  color,
   ...props
 }: TextUIProps & TextProps) {
   return (
-    <TextUI size={size} {...props}>
+    <TextUI size={size} color={color} {...props}>
       {children}
     </TextUI>
   )

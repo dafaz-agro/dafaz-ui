@@ -10,6 +10,8 @@ export const InputContainer = styled('div', {
   alignItems: 'baseline',
   width: '100%',
 
+  boxShadow: '0 3px 2px -2px $colors$gray400',
+
   transition: 'border 0.2s linear',
 
   '&:has(input:focus)': {
@@ -21,7 +23,30 @@ export const InputContainer = styled('div', {
     cursor: 'not-allowed',
   },
 
+  button: {
+    border: 0,
+    background: 'none',
+    marginRight: '0.5rem',
+    cursor: 'pointer',
+
+    svg: {
+      opacity: 0.75,
+      color: '$white',
+      marginBottom: '-0.3rem',
+    },
+  },
   variants: {
+    size: {
+      lg: {
+        fontSize: '$xl',
+      },
+      md: {
+        fontSize: '$lg',
+      },
+      sm: {
+        fontSize: '$md',
+      },
+    },
     withShadow: {
       true: {
         boxShadow: 'inset 0 3rem #444',
@@ -29,6 +54,7 @@ export const InputContainer = styled('div', {
     },
   },
   defaultVariants: {
+    size: 'lg',
     withShadow: false,
   },
 })
@@ -36,7 +62,6 @@ export const InputContainer = styled('div', {
 export const InputUI = styled('input', {
   margin: 0,
   fontFamily: '$app',
-  fontSize: '$xl',
   color: '$white',
   backgroundColor: 'transparent',
   border: 'none',
@@ -44,7 +69,11 @@ export const InputUI = styled('input', {
   padding: '$1 $2',
 
   '&::-ms-reveal': {
-    filter: 'invert(100%)',
+    display: 'none',
+  },
+
+  '&::-ms-clear': {
+    display: 'none',
   },
 
   '&::placeholder': {
@@ -55,6 +84,23 @@ export const InputUI = styled('input', {
 
   '&:focus': {
     outline: 0,
+  },
+
+  variants: {
+    size: {
+      lg: {
+        fontSize: '$xl',
+      },
+      md: {
+        fontSize: '$lg',
+      },
+      sm: {
+        fontSize: '$md',
+      },
+    },
+  },
+  defaultVariants: {
+    size: 'lg',
   },
 })
 

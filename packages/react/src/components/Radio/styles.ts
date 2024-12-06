@@ -1,4 +1,4 @@
-import type { ComponentProps } from 'react'
+import type { ComponentProps, CSSProperties } from 'react'
 import { styled } from '../../styles'
 import * as RadioGroup from '@radix-ui/react-radio-group'
 
@@ -27,4 +27,5 @@ export const RadioUI = styled(RadioGroup.Root, {
 
 export interface RadioUIProps extends ComponentProps<typeof RadioUI> {
   size?: 'sm' | 'md' | 'lg'
+  style?: CSSProperties
 }

@@ -12,7 +12,6 @@ const meta = {
   tags: ['autodocs'],
   args: {
     size: 'lg',
-    id: '0',
     label: 'Accept terms of use',
   },
   argTypes: {

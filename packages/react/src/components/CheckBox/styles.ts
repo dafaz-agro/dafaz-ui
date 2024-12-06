@@ -1,6 +1,6 @@
 import * as Checkbox from '@radix-ui/react-checkbox'
 import { styled, keyframes } from '../../styles'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, CSSProperties } from 'react'
 
 export const CheckBoxUI = styled(Checkbox.Root, {
   all: 'unset',
@@ -14,6 +14,7 @@ export const CheckBoxUI = styled(Checkbox.Root, {
   alignItems: 'center',
   transition: 'border 0.2s linear',
   border: '2px solid $gray400',
+  boxShadow: '1.3px 1.3px 4px -1px $colors$dafaz600',
 
   '&:focus,&[data-state="checked"]': {
     backgroundColor: '$dafaz600',
@@ -136,4 +137,5 @@ export const Label = styled('label', {
 export interface CheckboxIUProps extends ComponentProps<typeof CheckBoxUI> {
   size?: 'sm' | 'md' | 'lg'
   disabled?: boolean
+  style?: CSSProperties
 }

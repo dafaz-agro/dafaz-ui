@@ -6,6 +6,7 @@ import {
   RadioItemUI,
   type RadioItemUIProps,
 } from './styles'
+import { useId } from 'react'
 
 interface RadioItemProps {
   label: string
@@ -13,19 +14,20 @@ interface RadioItemProps {
 
 export function RadioItem({
   label,
-  id,
   size,
   disabled = false,
   ...props
 }: RadioItemProps & RadioItemUIProps) {
+  const htmlId = useId()
+
   return (
-    <RadioItemContainer key={id}>
-      <RadioItemUI disabled={disabled} id={id} {...props} size={size}>
+    <RadioItemContainer>
+      <RadioItemUI disabled={disabled} id={htmlId} {...props} size={size}>
         <RadioIndicator asChild size={size}>
           <Check weight="bold" />
         </RadioIndicator>
       </RadioItemUI>
-      <Label disabled={disabled} htmlFor={id} size={size}>
+      <Label disabled={disabled} htmlFor={htmlId} size={size}>
         {label}
       </Label>
     </RadioItemContainer>
