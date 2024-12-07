@@ -1,5 +1,11 @@
 # @dafaz-ui/tokens
 
+## 3.0.2
+
+### Patch Changes
+
+- add new featu
+
 ## 3.0.1
 
 ### Patch Changes
