@@ -33,6 +33,13 @@ const meta = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <div style={{ width: '24.5rem', height: '15rem' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof Select>
 
 export default meta
@@ -40,7 +47,9 @@ export default meta
 type StoryUI = StoryObj<typeof meta>
 
 export const Default: StoryUI = {
-  args: {},
+  args: {
+    id: 'select_id',
+  },
   parameters: {
     docs: {
       description: {

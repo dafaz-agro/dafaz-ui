@@ -33,6 +33,13 @@ const meta = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <div style={{ width: '24.5rem', height: '15rem' }}>
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof MultiSelect>
 
 export default meta

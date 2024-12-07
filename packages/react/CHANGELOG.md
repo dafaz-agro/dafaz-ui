@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 6.0.0
+
+### Major Changes
+
+- Ad new color (red) and components
+
 ## 5.0.2
 
 ### Patch Changes

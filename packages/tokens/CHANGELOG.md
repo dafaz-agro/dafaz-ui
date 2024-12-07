@@ -1,5 +1,11 @@
 # @dafaz-ui/tokens
 
+## 3.0.0
+
+### Major Changes
+
+- Ad new color (red) and components
+
 ## 2.0.0
 
 ### Major Changes

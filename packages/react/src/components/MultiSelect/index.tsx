@@ -119,16 +119,6 @@ export const MultiSelect = forwardRef<
 
     function handleOnClick() {
       setClickClass((state) => !state)
-
-      setTimeout(() => {
-        setClickClass((state) => {
-          if (state) {
-            return !state
-          } else {
-            return state
-          }
-        })
-      }, 3000)
     }
 
     function handleRemoveItem(e: MouseEvent<HTMLElement>, id: string) {
@@ -203,7 +193,7 @@ export const MultiSelect = forwardRef<
                   alignItems: 'center',
                 }}
               >
-                <span>{placeholder}</span>
+                <span style={{ opacity: 0.75 }}>{placeholder}</span>
                 <span
                   style={{
                     display: 'flex',
@@ -217,7 +207,7 @@ export const MultiSelect = forwardRef<
             </div>
           ))}
 
-        <SelectContainerUI>
+        <SelectContainerUI onMouseOutCapture={handleOnClick}>
           {values.map((item) => {
             return (
               <CheckBox
@@ -228,7 +218,7 @@ export const MultiSelect = forwardRef<
                 checked={item.isChecked}
                 value={updateSelectComponent(item.value)}
                 handleOnChange={async () => {
-                  await handleOnValueChange(item.id)
+                  handleOnValueChange(item.id)
                 }}
               />
             )

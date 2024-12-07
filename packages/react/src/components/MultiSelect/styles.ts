@@ -3,6 +3,7 @@ import type { ComponentProps, CSSProperties } from 'react'
 
 export const SelectUI = styled('div', {
   width: '100%',
+  maxWidth: '24.5rem',
 
   position: 'relative',
   display: 'inline-block',
@@ -22,6 +23,10 @@ export const SelectUI = styled('div', {
   padding: '$1 $2',
 
   boxShadow: '0 3px 2px -2px $colors$gray400',
+
+  '&:hover': {
+    borderBottom: '2px solid $dafaz400',
+  },
 
   '&.clicked': {
     borderBottom: '2px solid $dafaz400',
@@ -91,8 +96,9 @@ export const SelectContainerUI = styled('div', {
   display: 'none',
 
   position: 'absolute',
-  zIndex: 1,
+  zIndex: 999,
   minWidth: '100%',
+  maxWidth: '24.5rem',
 
   background: '$gray800',
 

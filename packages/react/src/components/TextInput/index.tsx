@@ -47,7 +47,7 @@ export const TextInput = forwardRef<ElementRef<typeof InputUI>, TextInputProps>(
     }
 
     return (
-      <InputContainer withShadow={withShadow}>
+      <InputContainer size={size} withShadow={withShadow}>
         <InputUI
           id={id}
           ref={ref}

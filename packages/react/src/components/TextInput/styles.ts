@@ -38,12 +38,24 @@ export const InputContainer = styled('div', {
     size: {
       lg: {
         fontSize: '$xl',
+        svg: {
+          width: '$5',
+          height: '$5',
+        },
       },
       md: {
         fontSize: '$lg',
+        svg: {
+          width: '$5',
+          height: '$5',
+        },
       },
       sm: {
         fontSize: '$md',
+        svg: {
+          width: '$4',
+          height: '$4',
+        },
       },
     },
     withShadow: {
