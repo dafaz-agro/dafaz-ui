@@ -1,5 +1,11 @@
 # @dafaz-ui/tokens
 
+## 3.0.4
+
+### Patch Changes
+
+- Add new feat
+
 ## 3.0.3
 
 ### Patch Changes
