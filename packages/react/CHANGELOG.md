@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 6.0.3
+
+### Patch Changes
+
+- Add feat
+
 ## 6.0.2
 
 ### Patch Changes
