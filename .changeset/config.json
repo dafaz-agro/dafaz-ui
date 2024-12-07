@@ -7,5 +7,5 @@
   "access": "public",
   "baseBranch": "master",
   "updateInternalDependencies": "patch",
-  "ignore": ["@dafaz-ui/docs"]
+  "ignore": ["@dafaz-ui/docs","@dafaz-ui/teste"]
 }
