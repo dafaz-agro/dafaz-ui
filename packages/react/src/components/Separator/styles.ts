@@ -3,6 +3,7 @@ import { styled } from '../../styles'
 
 export const SeparatorUI = styled('hr', {
   width: '100%',
+  borderStyle: 'solid',
 
   variants: {
     color: {
@@ -24,22 +25,16 @@ export const SeparatorUI = styled('hr', {
     },
     size: {
       lg: {
-        borderStyle: 'solid',
         borderWidth: '2px',
       },
       md: {
-        borderStyle: 'solid',
         borderWidth: '1px',
       },
       sm: {
-        borderStyle: 'solid',
-        borderWidth: '0.5px',
-        opacity: 0.3,
+        borderWidth: '0.75px',
       },
       xs: {
-        borderStyle: 'solid',
         borderWidth: '0.5px',
-        opacity: 0.1,
       },
     },
   },

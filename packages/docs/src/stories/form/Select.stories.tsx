@@ -35,7 +35,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <div style={{ width: '24.5rem', height: '15rem' }}>
+      <div style={{ width: '14.5rem', height: '15rem' }}>
         <Story />
       </div>
     ),
