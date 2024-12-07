@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 5.0.1
+
+### Patch Changes
+
+- Add new features
+
 ## 5.0.0
 
 ### Major Changes
