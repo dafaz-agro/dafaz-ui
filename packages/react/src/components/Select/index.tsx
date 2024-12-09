@@ -52,7 +52,7 @@ export const Select = forwardRef<ElementRef<typeof SelectUI>, SelectProps>(
             display: 'flex',
             alignItems: 'center',
             paddingLeft: '1rem',
-            marginRight: '0.6rem',
+            marginRight: '0.7rem',
             marginLeft: '-3rem',
           }}
         >

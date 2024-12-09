@@ -1,6 +1,6 @@
 import { CaretDown, X } from '@phosphor-icons/react'
 import { CheckBox } from '../CheckBox'
-import { SelectUI, SelectContainerUI, SelectUIProps } from './styles'
+import { SelectUI, SelectContainerUI, SelectUIProps, Button } from './styles'
 
 import {
   forwardRef,
@@ -39,6 +39,7 @@ export const MultiSelect = forwardRef<
     ])
     const [selectedValue, setSelectedValue] = useState([''])
     const [clickClass, setClickClass] = useState(false)
+    const [isClose, setIsClosed] = useState(true)
 
     useEffect(() => {
       items.map((item) =>
@@ -79,7 +80,6 @@ export const MultiSelect = forwardRef<
     }, [values, items, setValues])
 
     function handleOnValueChange(id: string) {
-      setClickClass(() => false)
       setValues((state) => {
         const items = state.filter((item) => item.id !== id)
         const item = state.find((item) => item.id === id)
@@ -119,9 +119,11 @@ export const MultiSelect = forwardRef<
 
     function handleOnClick() {
       setClickClass((state) => !state)
+      setIsClosed((state) => !state)
     }
 
     function handleRemoveItem(e: MouseEvent<HTMLElement>, id: string) {
+      setIsClosed(true)
       handleOnValueChange(id)
     }
 
@@ -147,43 +149,36 @@ export const MultiSelect = forwardRef<
         id={id}
         size={size}
         onClick={handleOnClick}
-        onBlur={handleOnClick}
         value={selectedValue}
         onChange={onChange}
         className={clickClass ? 'clicked' : ''}
         {...props}
       >
-        {(itemsChecked.length > 0 &&
+        {(isClose &&
+          itemsChecked.length > 0 &&
           itemsChecked.map((item) => {
             return (
               <div key={`opt:${item.id}`}>
                 <div
                   style={{
                     display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    marginTop: '0.2rem',
                     alignItems: 'center',
+                    justifyContent: 'space-between',
                   }}
                 >
-                  <span>{item.label}</span>
-                  <button
-                    style={{
-                      all: 'unset',
-                      display: 'flex',
-                      alignItems: 'center',
-                      paddingLeft: '1rem',
-                    }}
+                  <span style={{ marginLeft: '0.5rem' }}>{item.label}</span>
+                  <Button
                     type="button"
+                    size={size}
                     onClick={(e) => handleRemoveItem(e, item.id)}
                   >
                     <X size={24} weight="bold" />
-                  </button>
+                  </Button>
                 </div>
               </div>
             )
           })) ||
-          (itemsChecked.length === 0 && (
+          ((itemsChecked.length === 0 || !isClose) && (
             <div>
               <div
                 style={{
@@ -193,12 +188,14 @@ export const MultiSelect = forwardRef<
                   alignItems: 'center',
                 }}
               >
-                <span style={{ opacity: 0.75 }}>{placeholder}</span>
+                <span style={{ opacity: 0.75, marginLeft: '0.5rem' }}>
+                  {placeholder}
+                </span>
                 <span
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    paddingLeft: '1rem',
+                    marginRight: '0.7rem',
                   }}
                 >
                   <CaretDown size={24} weight="bold" />
@@ -207,7 +204,12 @@ export const MultiSelect = forwardRef<
             </div>
           ))}
 
-        <SelectContainerUI onMouseOutCapture={handleOnClick}>
+        <SelectContainerUI
+          className={isClose ? 'closed' : 'opened'}
+          onMouseLeave={() => {
+            setIsClosed(true)
+          }}
+        >
           {values.map((item) => {
             return (
               <CheckBox
@@ -217,7 +219,7 @@ export const MultiSelect = forwardRef<
                 label={item.label}
                 checked={item.isChecked}
                 value={updateSelectComponent(item.value)}
-                handleOnChange={async () => {
+                handleOnChange={() => {
                   handleOnValueChange(item.id)
                 }}
               />

@@ -89,6 +89,8 @@ export const SelectUI = styled('select', {
   margin: 0,
   padding: '$1 $1',
 
+  marginLeft: '$1',
+
   '&:disabled': {
     opacity: 0.5,
   },

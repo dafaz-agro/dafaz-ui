@@ -1,5 +1,11 @@
 # @dafaz-ui/react
 
+## 7.0.0
+
+### Major Changes
+
+- Add new features and multiselect fix
+
 ## 6.0.5
 
 ### Patch Changes

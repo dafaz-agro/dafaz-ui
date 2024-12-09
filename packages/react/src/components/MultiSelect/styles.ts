@@ -1,7 +1,42 @@
 import { styled } from '../../styles'
 import type { ComponentProps, CSSProperties } from 'react'
 
+export const Button = styled('button', {
+  backgroundColor: 'transparent',
+  border: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  color: 'white',
+  marginBottom: '-3px',
+
+  cursor: 'pointer',
+
+  zIndex: 5,
+
+  variants: {
+    size: {
+      lg: {
+        height: '$10',
+        width: '$10',
+      },
+      md: {
+        height: '$8',
+        width: '$8',
+      },
+      sm: {
+        height: '$6',
+        width: '$6',
+      },
+    },
+  },
+  defaultVariants: {
+    size: 'lg',
+  },
+})
+
 export const SelectUI = styled('div', {
+  zIndex: 3,
   width: '100%',
   maxWidth: '24.5rem',
 
@@ -20,8 +55,6 @@ export const SelectUI = styled('div', {
   boxSizing: 'border-box',
   transition: 'border 0.2s linear',
 
-  padding: '$1 $2',
-
   boxShadow: '0 3px 2px -2px $colors$gray400',
 
   '&:hover': {
@@ -30,15 +63,6 @@ export const SelectUI = styled('div', {
 
   '&.clicked': {
     borderBottom: '2px solid $dafaz400',
-
-    '&:hover': {
-      '> div': {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'start',
-        gap: '$3',
-      },
-    },
   },
 
   variants: {
@@ -85,18 +109,15 @@ export interface SelectUIProps extends ComponentProps<typeof SelectUI> {
 }
 
 export const SelectContainerUI = styled('div', {
-  marginTop: '0.4rem',
-  marginLeft: '-0.5rem',
   padding: '$3 $2',
+  marginTop: '2px',
 
   border: '1px solid $gray400',
   boxSizing: 'border-box',
   borderRadius: '$md',
 
-  display: 'none',
-
   position: 'absolute',
-  zIndex: 999,
+  zIndex: 2,
   minWidth: '100%',
   maxWidth: '24.5rem',
 
@@ -107,10 +128,19 @@ export const SelectContainerUI = styled('div', {
   fontWeight: '$regular',
   cursor: 'pointer',
 
-  '&:hover': {
+  '&.closed': {
+    display: 'none',
+  },
+
+  '&.opened': {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'start',
     gap: '$3',
   },
 })
+
+export interface SelectContainerUIProps
+  extends ComponentProps<typeof SelectContainerUI> {
+  className?: string
+  style?: CSSProperties
+}
