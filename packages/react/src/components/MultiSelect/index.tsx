@@ -186,6 +186,7 @@ export const MultiSelect = forwardRef<
                   justifyContent: 'space-between',
                   width: '100%',
                   alignItems: 'center',
+                  padding: '4px 0px',
                 }}
               >
                 <span style={{ opacity: 0.75, marginLeft: '0.5rem' }}>
